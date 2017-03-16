@@ -1,5 +1,5 @@
 var WORDS = ["booger", "apple", "hackbright", "mango"];
-var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman"];
+// var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman"];
 
 var playing = true;
 
@@ -27,11 +27,16 @@ while (playing) {
                        + scambledWord).toLowerCase().replace(/\s/g, '');
 
     // If the user guesses wrong, tell them they were wrong and show the right word.
-    if (guess === realWord){
-        alert("Good guess!");
-    } else {
-        alert("Wrong, you failure! The word was " + realWord);
+    // if (guess === realWord){
+    //     alert("Good guess!");
+    // } else {
+    //     alert("Wrong, you failure! The word was " + realWord);
+    // }
+    while (guess !== realWord) {
+        var guess = prompt("Wrong you failure, try again\nWhat is this scrambled word?\n"
+                       + scambledWord)
     }
+    alert("Great guess you awesome engineer!")
     // If the user guesses the correct word, congratulate them.
 
     playing = confirm("Press OK To keep playing or Cancel to quit");
